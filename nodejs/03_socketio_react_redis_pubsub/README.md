@@ -1,5 +1,7 @@
 # socketio_react_redis_pubsub
 
+This is sample chat web applicaiton with multi websocket server.
+
 ## How to install
 
 ```

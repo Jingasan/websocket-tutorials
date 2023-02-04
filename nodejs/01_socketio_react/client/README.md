@@ -1,5 +1,7 @@
 # socketio_react/client
 
+This is client side of sample chat web applicaiton with single websocket server.
+
 ## How to install
 
 ```

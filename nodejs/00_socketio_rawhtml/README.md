@@ -1,5 +1,7 @@
 # socketio_rawhtml
 
+This is sample chat web applicaiton with single websocket server.
+
 ## How to install
 
 ```
