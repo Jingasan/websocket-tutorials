@@ -1,0 +1,24 @@
+version: "3.9"
+services:
+  # Redisコンテナの設定
+  redis-server:
+    image: redis:7.0.8-alpine
+  # Websocketコンテナの設定
+  websocket-server:
+    image: websocket-container:1.0.0
+    deploy:
+      replicas: 3 # 起動するコンテナ数(起動するWebSocketサーバー数)
+    build:
+      context: ./websocket
+      dockerfile: Dockerfile
+      args: # プロキシ環境下の場合
+        - HTTP_PROXY=$HTTP_PROXY
+        - http_proxy=$http_proxy
+        - HTTPS_PROXY=$HTTPS_PROXY
+        - https_proxy=$https_proxy
+    ports:
+      - "3000-3002:3000"
+    working_dir: /server
+    command: node index.js
+    depends_on:
+      - redis # Redisコンテナが起動した後に起動

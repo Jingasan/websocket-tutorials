@@ -3,3 +3,5 @@ nodejs/00_socketio_rawhtml/index.js
 nodejs/01_socketio_react/server/node_modules
 nodejs/01_socketio_react/server/index.js
 nodejs/01_socketio_react/client/node_modules
+nodejs/02_socketio_redis_pubsub/server/socketio/node_modules
+nodejs/02_socketio_redis_pubsub/server/socketio/index.js

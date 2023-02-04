@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Simple chat</title>
+  </head>
+  <body>
+    <h1>Simple chat</h1>
+    <!-- テキストボックスと送信ボタン -->
+    <input id="inputText" type="text" />
+    <input id="sendButton" type="submit" />
+    <ul id="messageList" />
+    <!-- ライブラリの読み込み -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      // サーバーに接続
+      const socket = io();
+
+      // InputBox内のテキストを空にする関数
+      const clearText = () => {
+        document.getElementById("inputText").value = "";
+      };
+
+      // ulタグに受信メッセージを追加する関数
+      const addMessageList = (message) => {
+        const ul = document.getElementById("messageList");
+        const li = document.createElement("li");
+        const text = document.createTextNode(message);
+        li.appendChild(text);
+        ul.appendChild(li);
+      };
+
+      // 送信ボタンクリック時に実行されるイベントハンドラ関数の登録
+      document.getElementById("sendButton").addEventListener("click", () => {
+        // InputBoxに入力されたテキストを取得
+        const inputMessage = document.getElementById("inputText").value;
+        if (inputMessage === "") {
+          return;
+        }
+        // サーバーへのメッセージ送信
+        socket.emit("sendMessage", inputMessage); // 取得したテキストをサーバーに送信する
+        // InputBox内のテキストを空にする
+        clearText();
+      });
+
+      // サーバーからのメッセージ受信
+      socket.on("receiveMessage", (message) => {
+        // 受信したメッセージをulタグに挿入する
+        addMessageList(message);
+      });
+    </script>
+  </body>
+</html>
