@@ -2,6 +2,8 @@
 
 This is sample chat web applicaiton with single websocket server.
 
+![Redis Pub/Sub with multi WebSocket servers](https://github.com/Jingasan/websocket-tutorials/blob/master/nodejs/00_socketio_rawhtml/ChatApplicationImage.png?raw=true "sample")
+
 ## How to install
 
 ```
