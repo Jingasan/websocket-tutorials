@@ -3,8 +3,8 @@ nodejs/00_socketio_rawhtml/index.js
 nodejs/01_socketio_react/server/node_modules
 nodejs/01_socketio_react/server/index.js
 nodejs/01_socketio_react/client/node_modules
-nodejs/02_socketio_redis_pubsub/websocket/server/node_modules
-nodejs/02_socketio_redis_pubsub/websocket/server/index.js
+nodejs/02_socketio_rawhtml_redis_pubsub/websocket/server/node_modules
+nodejs/02_socketio_rawhtml_redis_pubsub/websocket/server/index.js
 nodejs/03_socketio_react_redis_pubsub/websocket/server/node_modules
 nodejs/03_socketio_react_redis_pubsub/websocket/server/index.js
 nodejs/03_socketio_react_redis_pubsub/websocket/client/node_modules
