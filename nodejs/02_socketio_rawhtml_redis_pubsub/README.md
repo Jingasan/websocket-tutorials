@@ -2,6 +2,8 @@
 
 This is sample chat web applicaiton with multi websocket server.
 
+![Redis Pub/Sub with multi WebSocket servers](nodejs/02_socketio_rawhtml_redis_pubsub/WebSocket_RedisPubSub.png "redis")
+
 ## How to install
 
 ```
