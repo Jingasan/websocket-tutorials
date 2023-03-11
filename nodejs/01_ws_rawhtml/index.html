@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>WebSocketテスト</title>
+  </head>
+  <body>
+    <header>
+      <h1>WebSocketテスト</h1>
+    </header>
+    <article>
+      <div>
+        <input type="text" id="message" />
+        <button id="btn">Send</button>
+      </div>
+      <hr />
+      <div id="log"></div>
+    </article>
+  </body>
+  <script>
+    const sock = new WebSocket("ws://localhost:8080");
+    const sendBtn = document.getElementById("btn");
+    const message = document.getElementById("message");
+    const logArea = document.getElementById("log");
+    // ボタンクリック時
+    sendBtn.addEventListener("click", (e) => {
+      // テキストのPublish
+      sock.send(message.value);
+      const p = document.createElement("p");
+      p.textContent = `From client: ${message.value}`;
+      logArea.appendChild(p);
+    });
+    // メッセージ受信(Subscribe)時
+    sock.addEventListener("message", (e) => {
+      const p = document.createElement("p");
+      p.textContent = `From server: ${e.data}`;
+      logArea.appendChild(p);
+    });
+  </script>
+</html>

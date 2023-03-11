@@ -2,7 +2,7 @@
 
 This is client side of sample chat web applicaiton with single websocket server.
 
-![Redis Pub/Sub with multi WebSocket servers](https://github.com/Jingasan/websocket-tutorials/blob/master/nodejs/01_socketio_react/ChatApplicationImage.png?raw=true "sample")
+![Redis Pub/Sub with multi WebSocket servers](https://github.com/Jingasan/websocket-tutorials/blob/master/nodejs/00_socketio_react/ChatApplicationImage.png?raw=true "sample")
 
 ## How to install
 
