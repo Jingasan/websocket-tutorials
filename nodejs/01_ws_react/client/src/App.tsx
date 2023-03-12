@@ -40,7 +40,7 @@ export default function App() {
     };
     websocket.addEventListener("close", onClose);
 
-    console.log("ititialized");
+    console.log("Ititialized");
     // useEffectのクリーンアップ処理の中で、WebSocketの通信終了処理を実行
     return () => {
       websocket.close();
