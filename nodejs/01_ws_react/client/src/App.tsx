@@ -1,6 +1,8 @@
 import React from "react";
+// WebSocketサーバーとの通信が途切れた際に再接続を試みるライブラリ
 import ReconnectingWebSocket from "reconnecting-websocket";
 
+// Appコンポーネント
 export default function App() {
   // DOM要素(<input>)への参照
   const messageRef = React.useRef<HTMLInputElement>(null);
@@ -63,6 +65,7 @@ export default function App() {
     messageRef.current.value = "";
   }
 
+  // チャット画面
   return (
     <div>
       {/* 送信メッセージの入力ボックス */}
