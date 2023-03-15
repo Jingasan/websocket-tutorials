@@ -1,5 +1,5 @@
 {
-  "name": "socket.io",
+  "name": "@jingasan/server",
   "version": "0.0.1",
   "description": "WebSocket with socket.io and express",
   "main": "index.js",
@@ -14,7 +14,8 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "socket.io": "^4.6.1"
+    "socket.io": "^4.6.1",
+    "@jingasan/websocket_types": "^0.0.1"
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",

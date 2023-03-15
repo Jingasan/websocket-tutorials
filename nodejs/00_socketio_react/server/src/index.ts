@@ -1,7 +1,10 @@
 import express from "express";
 import * as http from "http";
 import * as socketio from "socket.io";
-import { ClientToServerEvents, ServerToClientEvents } from "./model";
+import {
+  ClientToServerEvents,
+  ServerToClientEvents,
+} from "@jingasan/websocket_types";
 
 // WebSocketサーバーの設定
 const HOST = "localhost";

@@ -1,7 +1,7 @@
 {
-  "name": "client",
+  "name": "@jingasan/client",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,7 +11,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "socket.io-client": "^4.6.1"
+    "socket.io-client": "^4.6.1",
+	"@jingasan/websocket_types": "^0.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",

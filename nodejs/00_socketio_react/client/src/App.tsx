@@ -5,7 +5,7 @@ import {
   ClientToServerType,
   ServerToClientEvents,
   ServerToClientType,
-} from "./model";
+} from "@jingasan/websocket_types";
 
 // WebSocketサーバーの接続設定
 const HOST = "localhost";
