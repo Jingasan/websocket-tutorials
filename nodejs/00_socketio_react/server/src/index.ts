@@ -36,7 +36,7 @@ io.on("connection", (socket) => {
 
   // クライアントからのメッセージ受信時
   socket.on("sendMessage", (data) => {
-    console.log("Message has been sent: ", data.message);
+    console.log("Receive message: ", data.message);
     // クライアントへのメッセージ送信
     io.emit("receiveMessage", data); // 全クライアントに対して受信したメッセージを送信する
   });
