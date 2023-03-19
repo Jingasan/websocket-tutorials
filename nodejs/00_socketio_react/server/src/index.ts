@@ -7,7 +7,6 @@ import {
 } from "@jingasan/websocket_types";
 
 // WebSocketサーバーの設定
-const HOST = "localhost";
 const PORT = 3000;
 
 // 初期化
@@ -26,8 +25,8 @@ const io = new socketio.Server<ClientToServerEvents, ServerToClientEvents>(
 // WebSocket接続数
 let connectionNum = 0;
 
-// WebSocketサーバーの起動
-server.listen(PORT, HOST, () => {
+// HTTPサーバーの起動
+server.listen(PORT, () => {
   console.log("Server running at localhost:" + PORT);
   console.log("connection num: " + connectionNum);
 });
@@ -40,8 +39,8 @@ io.on("connection", (socket) => {
   // クライアントからのメッセージ受信時
   socket.on("sendMessage", (data) => {
     console.log("Receive message: ", data.message);
-    // クライアントへのメッセージ送信
-    io.emit("receiveMessage", data); // 全クライアントに対して受信したメッセージを送信する
+    // 全クライアントに対して受信したメッセージを送信
+    io.emit("receiveMessage", data);
   });
 
   // 接続終了時
